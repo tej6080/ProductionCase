@@ -1,0 +1,864 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>阀大师互联网平台</title>
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <!--<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>-->
+  <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="js/time.js"></script>
+  <script type="text/javascript" src="js/jquery.time-to.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="timeTo.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <ul class="left">
+      <li class="leftliLogo"></li>
+      <li class="leftliUser">
+        <article class="leftArticle2">
+          <p id="Week"></p>
+          <p>&nbsp;</p>          
+          <p id="Date"></p>
+        </article>
+        <article class="leftArticle1">欢迎您登陆：admin</article>
+      </li>
+    </ul>
+    <ul class="mid">
+      <li>
+        <!--阀大师互联网平台-->
+      </li>
+    </ul>
+    <ul class="right">
+      <li class="rightliWeather">
+        <span>天气</span>
+        <b>晴</b>
+        <span>温度</span>
+        <b>22℃</b>
+        <span>湿度</span>
+        <b>91%</b>
+        <span>风力</span>
+        <b>南风2级</b>
+      </li>
+      <li class="settingli">
+        <div class="downBox">
+          <ul>
+            <li class="downBoxli1">首页</li>
+            <li class="downBoxli2">管理平台</li>
+            <li class="downBoxli3">退出系统</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+
+  <main>
+    <div class="main_Left">
+      <div class="main_Title">最新体检</div>
+      <div class="mainLabel mainLabel_top"></div>
+      <div class="mainLabel mainLabel1">
+        <div class="newData">
+          <div class="echartDiv" id="dataEcharts"></div>
+          <div class="time">2021.06.04 14:02:05</div>
+        </div>
+      </div>
+      <div class="mainLabel mainLabel_bottom"></div>
+      <div class="mainLabel mainLabel_blank"></div>
+      <div class="main_Title">设备数据</div>
+      <div class="mainLabel mainLabel_top"></div>
+      <div class="mainLabel mainLabel2">
+        <div id="deviceLabel">
+          <ul>
+            <li>
+              <div class="deviceScroll">
+                <ul class="ul1">
+                  <li>
+                    <p>温差平衡</p>
+                    <p class="p0">阀门功能</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">阀门开度</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">流量</p>
+                  </li>
+                  <li>
+                    <p>12.4℃</p>
+                    <p class="p0">回水温度</p>
+                  </li>
+                  <li>
+                    <p>92.5m³/h</p>
+                    <p class="p0">供回水温差</p>
+                  </li>
+                  <li>
+                    <p>399.9kW</p>
+                    <p class="p0">能耗功率</p>
+                  </li>
+                  <li class="li1">四层LAN3-DN65</li>
+                </ul>
+              </div>
+            </li>
+            <li><div class="deviceScroll">
+              <ul class="ul2">
+                <li>
+                  <p>温差平衡</p>
+                  <p class="p0">阀门功能</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">阀门开度</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">流量</p>
+                </li>
+                <li>
+                  <p>12.4℃</p>
+                  <p class="p0">回水温度</p>
+                </li>
+                <li>
+                  <p>92.5m³/h</p>
+                  <p class="p0">供回水温差</p>
+                </li>
+                <li>
+                  <p>399.9kW</p>
+                  <p class="p0">能耗功率</p>
+                </li>
+                <li class="li2">三层LAN3-DN100</li>
+              </ul>
+            </div></li>
+            <li>
+              <div class="deviceScroll">
+                <ul class="ul3">
+                  <li>
+                    <p>温差平衡</p>
+                    <p class="p0">阀门功能</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">阀门开度</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">流量</p>
+                  </li>
+                  <li>
+                    <p>12.4℃</p>
+                    <p class="p0">回水温度</p>
+                  </li>
+                  <li>
+                    <p>92.5m³/h</p>
+                    <p class="p0">供回水温差</p>
+                  </li>
+                  <li>
+                    <p>399.9kW</p>
+                    <p class="p0">能耗功率</p>
+                  </li>
+                  <li class="li3">二层LAN3-DN150</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="deviceScroll">
+                <ul class="ul3">
+                  <li>
+                    <p>温差平衡</p>
+                    <p class="p0">阀门功能</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">阀门开度</p>
+                  </li>
+                  <li>
+                    <p>99.9%</p>
+                    <p class="p0">流量</p>
+                  </li>
+                  <li>
+                    <p>12.4℃</p>
+                    <p class="p0">回水温度</p>
+                  </li>
+                  <li>
+                    <p>92.5m³/h</p>
+                    <p class="p0">供回水温差</p>
+                  </li>
+                  <li>
+                    <p>399.9kW</p>
+                    <p class="p0">能耗功率</p>
+                  </li>
+                  <li class="li3">二层LAN3-DN150</li>
+                </ul>
+              </div>
+            </li>
+            <li><div class="deviceScroll">
+              <ul class="ul1">
+                <li>
+                  <p>温差平衡</p>
+                  <p class="p0">阀门功能</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">阀门开度</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">流量</p>
+                </li>
+                <li>
+                  <p>12.4℃</p>
+                  <p class="p0">回水温度</p>
+                </li>
+                <li>
+                  <p>92.5m³/h</p>
+                  <p class="p0">供回水温差</p>
+                </li>
+                <li>
+                  <p>399.9kW</p>
+                  <p class="p0">能耗功率</p>
+                </li>
+                <li class="li1">四层LAN3-DN65</li>
+              </ul>
+            </div></li>
+            <li><div class="deviceScroll">
+              <ul class="ul3">
+                <li>
+                  <p>温差平衡</p>
+                  <p class="p0">阀门功能</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">阀门开度</p>
+                </li>
+                <li>
+                  <p>99.9%</p>
+                  <p class="p0">流量</p>
+                </li>
+                <li>
+                  <p>12.4℃</p>
+                  <p class="p0">回水温度</p>
+                </li>
+                <li>
+                  <p>92.5m³/h</p>
+                  <p class="p0">供回水温差</p>
+                </li>
+                <li>
+                  <p>399.9kW</p>
+                  <p class="p0">能耗功率</p>
+                </li>
+                <li class="li3">二层LAN3-DN150</li>
+              </ul>
+            </div></li>
+          </ul>
+        </div>
+        <!-- <ul class="ul1">
+          <li>
+            <p>温差平衡</p>
+            <p class="p0">阀门功能</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">阀门开度</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">流量</p>
+          </li>
+          <li>
+            <p>12.4℃</p>
+            <p class="p0">回水温度</p>
+          </li>
+          <li>
+            <p>92.5m³/h</p>
+            <p class="p0">供回水温差</p>
+          </li>
+          <li>
+            <p>399.9kW</p>
+            <p class="p0">能耗功率</p>
+          </li>
+          <li class="li1">四层LAN3-DN65</li>
+        </ul>
+        <ul class="ul2">
+          <li>
+            <p>温差平衡</p>
+            <p class="p0">阀门功能</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">阀门开度</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">流量</p>
+          </li>
+          <li>
+            <p>12.4℃</p>
+            <p class="p0">回水温度</p>
+          </li>
+          <li>
+            <p>92.5m³/h</p>
+            <p class="p0">供回水温差</p>
+          </li>
+          <li>
+            <p>399.9kW</p>
+            <p class="p0">能耗功率</p>
+          </li>
+          <li class="li2">三层LAN3-DN100</li>
+        </ul>
+        <ul class="ul3">
+          <li>
+            <p>温差平衡</p>
+            <p class="p0">阀门功能</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">阀门开度</p>
+          </li>
+          <li>
+            <p>99.9%</p>
+            <p class="p0">流量</p>
+          </li>
+          <li>
+            <p>12.4℃</p>
+            <p class="p0">回水温度</p>
+          </li>
+          <li>
+            <p>92.5m³/h</p>
+            <p class="p0">供回水温差</p>
+          </li>
+          <li>
+            <p>399.9kW</p>
+            <p class="p0">能耗功率</p>
+          </li>
+          <li class="li3">二层LAN3-DN150</li>
+        </ul> -->
+      </div>
+      <div class="mainLabel mainLabel_bottom"></div>
+    </div>
+
+    <div class="main_Mid">
+      <div class="searchDiv">
+        <ul>
+          <li name="title" class="li1" contenteditable placeholder="请输入内容" onkeydown="myFunction()">中铝六盘山热电</li>
+          <li class="li2"></li>
+        </ul>
+      </div>
+      <script type="text/javascript">
+        function myFunction() {
+          if (window.event && window.event.keyCode == 13) {
+            window.event.returnValue = false;
+          }
+        }
+      </script>
+      <div class="MidData">
+        <ul>
+          <li class="li1">项目数<span>316</span></li>
+          <li>设备数<span>15</span></li>
+        </ul>
+      </div>
+      <!--中间地图部分，通过left和top来控制点位，单位为百分百-->
+      <div class="chinamap">
+        <div class="mapDotB" style="left: 69.5%; top: 30.1%;"></div>
+        <div class="mapDotB" style="left: 60.5%; top: 40.1%;"></div>
+        <div class="mapDotB" style="left: 71.3%; top: 54.1%;"></div>
+        <div class="mapDotB" style="left: 78.5%; top: 44.1%;"></div>
+        <div class="mapDotG" style="left: 82%; top: 55.14%;"></div>
+        <div class="mapDotB" style="left: 54.24%; top: 70.5%;"></div>
+      </div>
+    </div>
+
+    <div class="main_Right">
+      <div class="legendicon">
+        <ul>
+          <li class="li1"></li>
+          <li>故障</li>
+        </ul>
+        <ul>
+          <li class="li2"></li>
+          <li>预警</li>
+        </ul>
+        <ul>
+          <li class="li3"></li>
+          <li>良好</li>
+        </ul>
+        <ul>
+          <li class="li4"></li>
+          <li>优秀</li>
+        </ul>
+      </div>
+      <div class="slidingLabel" id="slidingLabel">
+        <div class="slidingLabelDIV">
+          <h3>月</h3>
+          <h3>周</h3>
+          <h3 class="slidingLabel_active">日</h3>
+        </div>
+        <li id="slidingEcharts3"></li>
+        <li id="slidingEcharts2"></li>
+        <li id="slidingEcharts1" style="display: block;"></li>
+      </div>
+      <div class="main_Title">体检趋势</div>
+      <div class="mainLabel mainLabel_top"></div>
+      <div class="mainLabel mainLabel1"></div>
+      <div class="mainLabel mainLabel_bottom"></div>
+      <div class="mainLabel mainLabel_blank"></div>
+      <div class="main_Title">体检报告</div>
+      <div class="mainLabel mainLabel_top"></div>
+      <div class="mainLabel mainLabel2 devicReport">
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+        <ul>
+          <li class="li1">智慧门阀测试项目1,通讯数据扣分(10),阀门管路扣分(31)…</li>
+          <li class="li2">04/22 14:32</li>
+        </ul>
+      </div>
+      <div class="mainLabel mainLabel_bottom"></div>
+    </div>
+  </main>
+
+
+  <script type="text/javascript" src="js/sliding.js"></script>
+	<script type="text/javascript" src="js/jquery.kxbdMarquee.js"></script>
+  <script type="text/javascript" src="js/echarts.min.js"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=7205af5846ff17fd17c0a5dea28e6c0c"></script>
+
+  <script type="text/javascript">
+
+    (function () {
+			$("#deviceLabel").kxbdMarquee({ direction: "up", isEqual: false });
+		})();
+
+    var dom_dataEcharts = document.getElementById("dataEcharts");
+    var myChart_dataEcharts = echarts.init(dom_dataEcharts);
+    var app_dataEcharts = {};
+    var value = 83;
+    option = null;
+    option = {
+      title: {
+        text: `${value}`,
+        subtext: '优秀',
+        left: 'center',
+        top: '40%', //top待调整
+        textStyle: {
+          color: '#61F3C3',
+          fontSize: 50,
+          fontFamily: 'Arial',
+        },
+        subtextStyle: {
+          color: '#fff',
+          fontSize: 15,
+          fontFamily: 'PingFangSC-Regular',
+          top: 'center'
+        },
+        itemGap: -0, //主副标题间距
+      },
+      series: [
+        {
+          type: 'gauge',
+          radius: "80%",
+          startAngle: 230, //刻度起始
+          endAngle: -50, //刻度结束
+          center: ["50%", "55%"],
+          detail: false,
+          data: [{ value: 100 }],
+          splitNumber: 10,
+          pointer: {
+            show: true,
+            length: '130%',
+            radius: '60%',
+            width: 5, //指针粗细
+          },
+          itemStyle: {
+            normal: {
+              color: 'rgba(255, 90, 77, 1)',
+            }
+          },
+          axisTick: {
+            show: true,
+            lineStyle: {
+              width: 0,
+              color: 'rgba(1,244,255, 0)'
+            }
+          },
+          splitLine: {
+            length: 0, //刻度节点线长度
+            lineStyle: {
+              width: 0,
+              color: 'rgba(1,244,255, 0)'
+            }, //刻度节点线
+          },
+          axisLabel: {
+            distance: 0,
+            textStyle: {
+              color: "rgba(255,255,255,0)",
+              fontSize: 0,
+            }
+          }, //刻度节点文字颜色
+          axisLine: {
+            lineStyle: {
+              opacity: 0,
+            }
+          },
+        },
+        {
+          type: 'gauge',
+          radius: "80%",
+          startAngle: 233, //刻度起始
+          endAngle: -55, //刻度结束
+          splitNumber: 0,
+          center: ["50%", "50%"],
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 0,
+              color: "rgba(255,255,255,0)",
+            }
+          },
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false
+          },
+          axisTick: {
+            show: false
+          },
+          pointer: {
+            show: false
+          },
+        },
+        {
+          type: 'pie',
+          radius: '33%',
+          center: ['50%', '57%'],
+          animation: false,
+          data: [
+            { value: 1, itemStyle: { color: '#091526' } },
+          ],
+          label: {
+            show: false,
+          },
+        },
+      ]
+    };
+    if (option && typeof option === "object") {
+      myChart_dataEcharts.setOption(option, true);
+    }
+
+    initEchart1();
+
+    function initEchart1() {
+      var dom_slidingEcharts1 = document.getElementById("slidingEcharts1");
+      var myChart_slidingEcharts1 = echarts.init(dom_slidingEcharts1);
+      var app_slidingEcharts1 = {};
+      option = null;
+      option = {
+        grid: {
+          left: "5%",
+          top: "15%",
+          right: "5%",
+          bottom: "1%",
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2.2', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28'],
+          axisTick: {
+            show: false,
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#5CC5FF ',
+              type: 'solid',
+            },
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        yAxis: {
+          type: 'value',
+          max: 100,
+          min: 0,
+          splitNumber: 5,
+          splitArea: {
+            show: true,
+            interval: 0,
+            areaStyle: {
+              color: ['rgba(91,197,255,0)', 'rgba(91,197,255,0.06)'],
+            },
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: 'rgba(92,197,255,0.1)',
+              type: 'solid',
+            },
+          },
+          axisLine: {
+            lineStyle: {
+              color: 'rgb(128, 128, 137, 0)',
+              type: 'dashed',
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        series: [
+          {
+            data: [54, 87, 50, 100, 42, 22, 15],
+            type: 'bar',
+            barWidth: '40%',
+            itemStyle: {
+              color: function (params) {
+                var colorList = ['#B2FF66', '#66FFCC', '#FFCC66', '#FF6F66', '#B2FF66', '#66FFCC', '#FFCC66'];
+                return colorList[params.dataIndex]
+              }
+            },
+          },
+        ],
+      };
+      if (option && typeof option === "object") {
+        myChart_slidingEcharts1.setOption(option, true);
+      }
+    }
+
+    function initEchart2() {
+      var dom_slidingEcharts2 = document.getElementById("slidingEcharts2");
+      var myChart_slidingEcharts2 = echarts.init(dom_slidingEcharts2);
+      var app_slidingEcharts2 = {};
+      option = null;
+      option = {
+        grid: {
+          left: "5%",
+          top: "15%",
+          right: "5%",
+          bottom: "1%",
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2.2', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28'],
+          axisTick: {
+            show: false,
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#5CC5FF ',
+              type: 'solid',
+            },
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        yAxis: {
+          type: 'value',
+          max: 100,
+          min: 0,
+          splitNumber: 5,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: 'rgba(92,197,255,0.1)',
+              type: 'solid',
+            },
+          },
+          axisLine: {
+            lineStyle: {
+              color: 'rgb(128, 128, 137, 0)',
+              type: 'dashed',
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        series: [
+          {
+            data: [34, 100, 50, 52, 43, 28, 33],
+            type: 'bar',
+            barWidth: '40%',
+            itemStyle: {
+              color: function (params) {
+                var colorList = ['#B2FF66', '#66FFCC', '#FFCC66', '#FF6F66', '#B2FF66', '#66FFCC', '#FFCC66'];
+                return colorList[params.dataIndex]
+              }
+            },
+          },
+        ],
+      };
+      if (option && typeof option === "object") {
+        myChart_slidingEcharts2.setOption(option, true);
+      }
+    }
+
+    function initEchart3() {
+      var dom_slidingEcharts3 = document.getElementById("slidingEcharts3");
+      var myChart_slidingEcharts3 = echarts.init(dom_slidingEcharts3);
+      var app_slidingEcharts3 = {};
+      option = null;
+      option = {
+        grid: {
+          left: "5%",
+          top: "15%",
+          right: "5%",
+          bottom: "1%",
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: ['2.2', '2.23', '2.24', '2.25', '2.26', '2.27', '2.28'],
+          axisTick: {
+            show: false,
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#5CC5FF ',
+              type: 'solid',
+            },
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        yAxis: {
+          type: 'value',
+          max: 100,
+          min: 0,
+          splitNumber: 5,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: 'rgba(92,197,255,0.1)',
+              type: 'solid',
+            },
+          },
+          axisLine: {
+            lineStyle: {
+              color: 'rgb(128, 128, 137, 0)',
+              type: 'dashed',
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            textStyle: {
+              color: '#F0FFFF',
+              fontSize: 12,
+            },
+          },
+        },
+        series: [
+          {
+            data: [20, 35, 50, 100, 40, 10, 30],
+            type: 'bar',
+            barWidth: '40%',
+            itemStyle: {
+              color: function (params) {
+                var colorList = ['#B2FF66', '#66FFCC', '#FFCC66', '#FF6F66', '#B2FF66', '#66FFCC', '#FFCC66'];
+                return colorList[params.dataIndex]
+              }
+            },
+          },
+        ],
+      };
+      if (option && typeof option === "object") {
+        myChart_slidingEcharts3.setOption(option, true);
+      }
+    }
+
+
+
+
+
+
+
+
+
+    window.onresize = function () {
+      myChart_slidingEcharts1.resize();
+      myChart_slidingEcharts2.resize();
+      myChart_slidingEcharts3.resize();
+      myChart_dataEcharts.resize();
+    };
+  </script>
+
+
+
+
+
+</body>
+
+</html>

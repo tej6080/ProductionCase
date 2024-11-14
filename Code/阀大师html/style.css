@@ -1,0 +1,783 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	font-family: "Microsoft YaHei",Arial,sans-serif,Helvetica,"Trebuchet MS";
+}
+
+html {
+	font-size: 62.5%;
+	width: 100%;
+	height: 100%;
+	min-width: 1270px;
+	min-height: 640px;
+	background: #070525;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-size: 1.5vh;
+	width: 100%;
+	height: 100%;
+	background: url(images/bg.png) center center no-repeat;
+	z-index:-10;
+	zoom: 1;
+	background-color: #070525;
+	background-size: 100% 100%;
+}
+
+video#bgvid {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -9999;
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	;
+}
+
+a:hover {
+	color: #767676;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	width: auto;
+	vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+dl {
+	padding: 0;
+	margin: 0;
+}
+
+input,
+select,
+textarea {
+	outline: none;
+}
+
+.clear {
+	clear: both;
+}
+
+::-webkit-input-placeholder {
+	font-size: 1.6rem;
+	color: #cccccc;
+}
+
+.container {
+	display: flex;
+	position: relative;
+}
+
+.anchorBL {
+	display: none
+}
+
+.body-background{
+	background: url(images/bg.png);
+	position:fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index:-10;
+	zoom: 1;
+	background-color: #070525;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-position: center 0;
+}
+
+
+
+
+.header{
+	background: url('images/BigTitle.png') no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9%;
+}
+.header ul{
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.header ul.left{
+	width: 33%;
+}
+.header ul.left li{
+	float: left;
+	height: 84%;
+}
+.header ul.left li.leftliLogo{
+	width: 35%;
+	background: url('images/zeta_logo.png') center center no-repeat;
+	background-size: auto 55%;
+}
+.header ul.left li p{
+	display: block;
+	line-height: 130%;
+	font-size: 1.5vh;
+	text-indent: 5px;
+	color: #5CC5FF;
+}
+.header ul.left li.leftliUser{
+	width: 65%;
+	padding-top: 2%;
+	height: 76%;
+	text-align: left;
+}
+.header ul.left li.leftliUser article{
+	display: block;
+	line-height: 180%;
+	font-size: 1vh;
+	color: #5CC5FF;
+	text-indent: 4pt;
+}
+.header ul.left li.leftliUser article.leftArticle2{
+	display: inline-block;
+}
+.header ul.left li.leftliUser article.leftArticle2 p{
+	float: right;
+}
+
+
+.header ul.mid{
+	width: 34%;
+}
+.header ul.mid li{
+	font-size: 3.5vh;
+	text-align: center;
+	font-weight: bold;
+	line-height: 200%;
+	height: 100%;
+}
+.header ul.right{
+	width: 33%;
+}
+.header ul.right li{
+	float: left;
+	margin-top: 1%;
+	margin-left: 2%;
+}
+.header ul.right li p{
+	display: block;
+	line-height: 130%;
+	font-size: 1vh;
+	text-indent: 5px;
+	color: #5CC5FF;
+}
+.header ul.right li.rightliUser{
+	width: 85%;
+	padding-top: 2%;
+	height: 76%;
+	text-align: right;
+}
+.header ul.right li.rightliUser article{
+	display: block;
+	line-height: 180%;
+	font-size: 1vh;
+	color: #5CC5FF;
+}
+.header ul.right li.rightliUser article.rightArticle2{
+	display: inline-block;
+}
+.header ul.right li.rightliUser article.rightArticle2 p{
+	float: right;
+}
+.header ul.right li.rightliWeather{
+	width: 85%;
+	padding-top: 2%;
+	height: 76%;
+	text-align: right;
+	line-height: 250%;
+}
+.header ul.right li.rightliWeather b{
+	font-weight: bold;
+	font-size: 1.5vh;
+	padding-right: 2%;
+	display: inline-block;
+}
+.header ul.right li.rightliWeather span{
+	font-size: 1vh;
+	display: inline-block;
+}
+
+.header ul.right li.settingli{
+	background: url('images/icon01.png') right top no-repeat;
+	background-size: auto 65%;
+	width: 7%;
+	height: 50%;
+	margin-top: 3.5%;
+	position: relative;
+	display: inline-block;
+}
+.header ul.right li.settingli:hover .downBox{
+	display: block;
+}
+.downBox{
+	display: none;
+	position: absolute;
+	border: 1px solid #51ace0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 1%;
+	width: 105px;
+	font-size: 12px;
+	background: #0b0f2c;
+	right: 8%;
+	top: 85%;
+	z-index: 999;
+}
+.downBox ul{
+	height: auto;
+}
+.downBox ul li{
+	float: none;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #51ace0;
+	text-indent: 4rem;
+	cursor: pointer;
+}
+.downBox ul li:hover{
+	color: #5cc5ff;
+}
+.downBox ul li.downBoxli1{
+	background: url(images/setting1.png) left center no-repeat;
+	background-size: auto 80%;
+	background-blend-mode: lighten;
+}
+.downBox ul li.downBoxli2{
+	background: url(images/setting2.png) left center no-repeat;
+	background-size: auto 80%;
+}
+.downBox ul li.downBoxli3{
+	background: url(images/setting3.png) left center no-repeat;
+	background-size: auto 80%;
+	border-bottom: none;
+}
+
+main{
+	width: 100%;
+	height: 89%;
+	position: absolute;
+}
+.main_Left, .main_Mid, .main_Right{
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.main_Left{
+	width: 22.4%;
+	padding-left: 1.25%;
+}
+.main_Mid{
+	width: 52.7%;
+	padding: 0;
+}
+.main_Right{
+	width: 22.4%;
+	padding-right: 1.25%;
+}
+
+.main_Title{
+	background: url(images/mainTitlebg.png) no-repeat;
+	background-size: 100% auto;
+	text-indent: 3rem;
+	font-size: 2.1vh;
+	color: #5CC5FF;
+	height: 4.5%;
+	line-height: 175%;
+	font-style: italic;
+	font-weight: bolder;
+	text-shadow:#000 3px 4px 5px;
+}
+
+.mainLabel{
+	width: 100%;
+	background-color: rgba(92, 197, 255, 5%);
+}
+.mainLabel.mainLabel_blank{
+	height: 2.5%;
+	background: none;
+}
+.mainLabel.mainLabel_top{
+	background-image: url(images/LfetBoxa01.png);
+	height: 0.625%;
+}
+.mainLabel.mainLabel_bottom{
+	background-image: url(images/LfetBoxa02.png);
+	height: 0.1%;
+}
+.mainLabel.mainLabel_top, .mainLabel.mainLabel_bottom{
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.mainLabel.mainLabel1{
+	height: 26.5%;
+}
+.mainLabel.mainLabel2{
+	height: 61%;
+}
+
+.slidingLabelBJ{
+	background: url(images/line.png) center center no-repeat;
+}
+
+.slidingLabel {
+	width: 94%;
+	height: 31.6%;
+	margin: 0 auto;
+	font-size: 2vh;
+	text-align: center;
+	color: #FFFFFF;
+	position: absolute;
+}
+.slidingLabel .slidingLabel_active {
+	color: #5CC5FF;
+	background-image: linear-gradient(rgba(52,186,112,0),rgba(52,186,112,0.2), rgba(52,186,112,1));
+	border-bottom: 2px solid #DEEBF8;
+}
+.slidingLabel .slidingLabelDIV{
+	height: 12.5%;
+	padding-right: 27%;
+}
+.slidingLabel h3 {
+	font-size: 2vh;
+	float: right;
+	height: 100%;
+	width: 13%;
+	margin: 0;
+	padding: 0;
+	color: #F0FFFF;
+	line-height: 160%;
+	cursor: pointer;
+}
+.slidingLabel li {
+	clear: both;
+	height: 85%;
+	width: 100%;
+	padding-top: 2%;
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+.legendicon{
+	position: absolute;
+	top: 5%;
+	width: 95%;
+	z-index: 1;
+}
+.legendicon ul{
+	width: 17%;
+	display: inline-block;
+	float: right;
+}
+.legendicon ul li{
+	width: 70%;
+	display: inline-block;
+}
+.legendicon ul li.li1{
+	background-color: #FF6F66;
+	width: 8px;
+	height: 8px;
+}
+.legendicon ul li.li2{
+	background-color: #FFCC66;
+	width: 8px;
+	height: 8px;
+}
+.legendicon ul li.li3{
+	background-color: #66FFCC;
+	width: 8px;
+	height: 8px;
+}
+.legendicon ul li.li4{
+	background-color: #B2FF66;
+	width: 8px;
+	height: 8px;
+}
+
+
+.deviceData{
+	font-size: 1.5vh;
+	font-weight: bold;
+	color: #F0FFFF;
+}
+.deviceData ul{
+	height: 27%;
+	padding-top: 5.5%;
+	width: 90%;
+	margin: 0 auto;
+}
+.deviceData ul.ul1{
+	background: url(images/LfetBg02.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceData ul.ul2{
+	background: url(images/LfetBg03.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceData ul.ul3{
+	background: url(images/LfetBg04.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceData ul li{
+	display: inline-block;
+	width: 31%;
+	height: 40%;
+}
+.deviceData ul li.li1, .deviceData ul li.li2, .deviceData ul li.li3{
+	font-size: 1.8vh;
+	text-align: center;
+	font-weight:lighter;
+	width: 100%;
+	height: 20%;
+	background-position-x: 75%;
+	background-position-y: 40%;
+	background-repeat: no-repeat;
+	background-size: auto 45%;
+	text-indent: -2rem;
+}
+.deviceData ul li.li1{
+	color: #FFAA01;
+	background-image: url(images/icon02.png);
+}
+.deviceData ul li.li2{
+	color: #61F3C3;
+	background-image: url(images/icon03.png);
+}
+.deviceData ul li.li3{
+	color: #5CC5FF;
+	background-image: url(images/icon04.png);
+}
+
+.deviceData ul li p{
+	text-indent: 3rem;
+	height: 40%;
+}
+@media (max-width:1440px){
+	.deviceData ul li p{
+		text-indent: 2rem;
+	}
+}
+.deviceData ul li p.p0{
+	font-weight: lighter;
+	color: rgba(240,255,255,0.7);
+	font-size: 1vh;
+}
+
+.devicReport{
+	height: 100%;
+	font-size: 1.2vh;
+}
+.devicReport ul{
+	height: 8.3%;
+	width: 100%;
+	background: url(images/box02.png) center center no-repeat;
+	background-size: 100% auto;
+	cursor: pointer;
+}
+.devicReport ul li{
+	display: inline-block;
+	float: left;
+	height: 100%;
+	line-height: 4.5vh;
+	color: rgba(240,255,255,1);
+}
+.devicReport ul li.li1{
+	width: 73%;
+	word-break:keep-all;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	text-indent: 1rem;
+}
+.devicReport ul li.li2{
+	width: 25%;
+	text-align: right;
+}
+.devicReport ul:hover{
+	background: url(images/box02_hover.png) center center no-repeat;
+}
+.devicReport ul:hover li{
+	color: rgba(255,111,102,1);
+}
+
+
+.searchDiv{
+	width: 45%;
+	height: 5%;
+	padding-top: 1%;
+	margin: 0 auto;
+}
+.searchDiv ul{
+	height: 100%;
+	background: url(images/box01.png) top center no-repeat;
+	background-size: 100% auto;
+}
+.searchDiv ul li{
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+.searchDiv ul li.li1{
+	width: 91%;
+	font-size: 1.5vh;
+	line-height: 3.8vh;
+	text-align: center;
+	outline: none;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;   
+}
+.searchDiv ul li.li1:empty::before{
+	color:#ADADAD;
+	content:attr(placeholder);
+	font-size: 1.5vh;
+}
+.searchDiv ul li.li1:focus{
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.searchDiv ul li.li2{
+	width: 9%;
+	background: url(images/search_botton.png) top center no-repeat;
+	background-size: 100% auto;
+	cursor: pointer;
+}
+.searchDiv ul li.li2:hover:after{
+	content: '';
+	display: block;
+	height: 100%;
+	transform: translateX(0%);
+	background: inherit;
+	filter: drop-shadow(0 0 #fff);
+}
+
+.MidData{
+	width: 57%;
+	height: 6%;
+	padding-top: 2%;
+	margin: 0 auto;
+}
+.MidData ul{
+	background: url(images/box03.png) top center no-repeat;
+	background-size: 100% auto;
+	height: 100%;
+	position: relative;
+}
+.MidData ul li{
+	width: 45%;
+	font-size: 2vh;
+	color: rgba(240,255,255,1);
+	float: left;
+	line-height: 5vh;
+}
+.MidData ul li span{
+	color: #E59903;
+	font-family: Arial;
+	font-weight: bolder;
+	text-indent: 2rem;
+	display: inline-block;
+}
+.MidData ul li.li1{
+	width: 50%;
+	padding-right: 5%;
+	text-align: right;
+}
+.chinamap{
+	height: 72%;
+	width: 100%;
+	margin: 0 auto;	
+	position: absolute;
+}
+.mapDot{
+	width: 5.5%;
+	height: 4.91%;
+	background: url(images/icon05.png) center center no-repeat;
+	background-size: 100% 100%;
+	position:absolute;
+	cursor: pointer;
+}
+.mapDot:hover:after{
+	content: '';
+	display: block;
+	height: 100%;
+	background: inherit;
+	filter: drop-shadow(0 0 rgb(255, 132, 0));
+}
+.mapDotG{
+	width: 3.5%;
+	height: 4.91%;
+	background: url(images/icon06.png) center center no-repeat;
+	background-size: 100% 100%;
+	position:absolute;
+	cursor: pointer;
+}
+.mapDotG:hover:after{
+	content: '';
+	display: block;
+	height: 100%;
+	background: inherit;
+	filter: drop-shadow(0 0 rgb(255, 132, 0));
+}
+.mapDotB{
+	width: 3.5%;
+	height: 4.91%;
+	background: url(images/icon07.png) center center no-repeat;
+	background-size: 100% 100%;
+	position:absolute;
+	cursor: pointer;
+}
+.mapDotB:hover:after{
+	content: '';
+	display: block;
+	height: 100%;
+	background: inherit;
+	filter: drop-shadow(0 0 rgb(255, 132, 0));
+}
+
+.newData{
+	width: 93%;
+	height: 100%;
+	margin: 0 auto;
+	background: url(images/newdata.png) center center no-repeat;
+	background-size: 100% auto;
+}
+.newData div.echartDiv{
+	width: 100%;
+	height: 83%;
+}
+.newData div.time{
+	width: 100%;
+	height: 17%;
+	color: rgba(240,255,255,0.7);
+	font-size: 1.2vh;
+	text-align: center;
+}
+
+
+#deviceLabel{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 1.5vh;
+	font-weight: bold;
+	color: #F0FFFF;
+}
+#deviceLabel ul li {
+	width: 100%;
+	margin: 0 auto;
+}
+.deviceScroll{
+	height: 10%;
+}
+.deviceScroll ul{
+	padding-top: 7.5%;
+	width: 90%;
+	margin: 0 auto;
+}
+.deviceScroll ul.ul1{
+	background: url(images/LfetBg02.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceScroll ul.ul2{
+	background: url(images/LfetBg03.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceScroll ul.ul3{
+	background: url(images/LfetBg04.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+.deviceScroll ul li{
+	display: inline-block;
+	width: 31% !important;
+	line-height: 130%;
+}
+.deviceScroll ul li.li1, .deviceScroll ul li.li2, .deviceScroll ul li.li3{
+	font-size: 1.8vh;
+	text-align: center;
+	font-weight:lighter;
+	width: 100% !important;
+	height: 20%;
+	background-position-x: 75%;
+	background-position-y: 40%;
+	background-repeat: no-repeat;
+	background-size: auto 30%;
+	text-indent: -2rem;
+	padding-top: 3%;
+	padding-bottom: 4%;
+}
+.deviceScroll ul li.li1{
+	color: #FFAA01;
+	background-image: url(images/icon02.png);
+}
+.deviceScroll ul li.li2{
+	color: #61F3C3;
+	background-image: url(images/icon03.png);
+}
+.deviceScroll ul li.li3{
+	color: #5CC5FF;
+	background-image: url(images/icon04.png);
+}
+
+.deviceScroll ul li p{
+	text-indent: 3rem;
+	padding-bottom: 5%;
+}
+@media (max-width:1440px){
+	.deviceScroll ul li p{
+		text-indent: 2rem;
+	}
+}
+.deviceScroll ul li p.p0{
+	font-weight: lighter;
+	color: rgba(240,255,255,0.7);
+	font-size: 1vh;
+}

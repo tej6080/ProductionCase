@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陕汽商用车能源管理系统</title>
+    <link rel="stylesheet" href="static/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 头部 -->
+      <div class="hd-top">
+        <img class="hd-top-bg" src="static/image/tittle.png" />
+        <div class="content">
+          <div class="left">
+            <img class="logo" src="static/image/logo.png" />
+            <div class="user">
+              <div class="userinfo">
+                <img src="static/image/icon_user.png" />
+                <div class="info">欢迎您: 超级管理员</div>
+              </div>
+              <div class="datetime">
+                <img src="static/image/icon_time.png" />
+                <div class="date" id="DateShow"></div>
+                <div class="time" id="TimeShow"></div>
+                <div class="day">星期四</div>
+              </div>
+            </div>
+          </div>
+          <div class="tit">陕汽商用车能源管理系统</div>
+          <div class="right">
+            <div class="weather">
+              <div class="item">
+                <img src="static/image/icon_weather.png" />
+                <div class="txt">
+                  <p>18°</p>
+                  <p>多云</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="static/image/icon_air.png" />
+                <div class="txt">
+                  <p>52良</p>
+                  <p>空气质量</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="static/image/icon_humidity.png" />
+                <div class="txt">
+                  <p>45</p>
+                  <p>湿度</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="static/image/icon_PM2.5.png" />
+                <div class="txt">
+                  <p>PM2.5</p>
+                </div>
+              </div>
+            </div>
+            <div class="setting">
+              <img class="stimg" src="static/image/icon_setting.png" />
+              <div class="navlist">
+                <div class="item"><img src="./static/image/home.png">首页</div>
+                <div class="item"><img src="./static/image/list.png">管理平台</div>
+                <div class="item"><img src="./static/image/shut.png">退出系统</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 工厂标记 -->
+      <div class="factory">
+        <div data-idx="1" class="item item-1">
+          <div class="info">
+            <h3>电池组装车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="2" class="item item-2">
+          <div class="info">
+            <h3>车架车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="3" class="item item-3">
+          <div class="info">
+            <h3>大件仓库</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="4" class="item item-4">
+          <div class="info">
+            <h3>总装车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="5" class="item item-5">
+          <div class="info">
+            <h3>精整大棚</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="6" class="item item-6">
+          <div class="info">
+            <h3>调试车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="7" class="item item-7">
+          <div class="info">
+            <h3>试制车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="8" class="item item-8">
+          <div class="info">
+            <h3>预留厂房(二期)</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="9" class="item item-9">
+          <div class="info">
+            <h3>焊装车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="10" class="item item-10">
+          <div class="info">
+            <h3>二号食堂</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="11" class="item item-11">
+          <div class="info">
+            <h3>综合站房</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="12" class="item item-12">
+          <div class="info">
+            <h3>综合办公楼</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="13" class="item item-13">
+          <div class="info">
+            <h3>一号食堂</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="14" class="item item-14">
+          <div class="info">
+            <h3>涂装车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="15" class="item item-15">
+          <div class="info">
+            <h3>污水处理站</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="16" class="item item-16">
+          <div class="info">
+            <h3>外饰件涂装车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="17" class="item item-17">
+          <div class="info">
+            <h3>预留研发大楼</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+        <div data-idx="18" class="item item-18">
+          <div class="info">
+            <h3>驾驶室装配车间</h3>
+            <p>当日水耗：5487T</p>
+            <p>当日水耗：5478kWh</p>
+          </div>
+          <i></i>
+        </div>
+      </div>
+      <!-- 弹出详情 -->
+      <div class="show-data">
+        <div class="close">&times;</div>
+        <div class="title">电池组装车间</div>
+        <div class="tips">当日水耗：54780T / 单日电耗：5484Wh</div>
+        <div class="charts">
+          <div class="item">
+            <h3>当日水电趋势</h3>
+            <div class="cvs"><div id="HPday" style="height: 160px"></div></div>
+          </div>
+          <div class="item">
+            <h3>当月水电趋势</h3>
+            <div class="cvs"><div id="HPmonth" style="height: 160px"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- 底部 -->
+      <div class="btm-data">
+        <div class="arrow arrow-up"></div>
+        <!-- 收缩 -->
+        <div class="detail downshow">
+          <div class="data-total">
+            <div><span class="span1"></span>当日电耗 251488 kWh</div>
+            <div><span class="span2"></span>当日水耗 2514818 T</div>
+          </div>
+          <div class="analysis analy-ele">
+            <div class="title">电耗分析</div>
+            <div class="content">
+              <div class="list">
+                <div class="item">
+                  <h3>当年累计电耗</h3>
+                  <p><em>251527</em><i>kwh</i></p>
+                </div>
+                <div class="item">
+                  <h3>昨日同期</h3>
+                  <p class="down">
+                    <img src="./static/image/down.png" />55.19%
+                  </p>
+                </div>
+                <div class="item">
+                  <h3>去年同期</h3>
+                  <p class="up"><img src="./static/image/up.png" />5.19%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="analysis analy-water">
+            <div class="title">水耗分析</div>
+            <div class="content">
+              <div class="list">
+                <div class="item">
+                  <h3>当年累计水耗</h3>
+                  <p><em>251527</em><i>T</i></p>
+                </div>
+                <div class="item">
+                  <h3>昨日同期</h3>
+                  <p class="down">
+                    <img src="./static/image/down.png" />55.19%
+                  </p>
+                </div>
+                <div class="item">
+                  <h3>去年同期</h3>
+                  <p class="up"><img src="./static/image/up.png" />5.19%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 展开 -->
+        <div class="detail upshow">
+          <div class="cvs-total">
+            <div id="totalEC" style="height: 100%"></div>
+          </div>
+          <div class="analysis analy-ele">
+            <div class="title">电耗分析</div>
+            <div class="content">
+              <div class="list">
+                <div class="item">
+                  <h3>当年累计电耗</h3>
+                  <p><em>251527</em><i>kwh</i></p>
+                </div>
+                <div class="item">
+                  <h3>昨日同期</h3>
+                  <p class="down">
+                    <img src="./static/image/down.png" />55.19%
+                  </p>
+                </div>
+                <div class="item">
+                  <h3>去年同期</h3>
+                  <p class="up"><img src="./static/image/up.png" />5.19%</p>
+                </div>
+              </div>
+              <div class="cvs-line">
+                <div id="electricityAnalysis" style="height: 230px; margin-top: 10px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="analysis analy-water">
+            <div class="title">水耗分析</div>
+            <div class="content">
+              <div class="list">
+                <div class="item">
+                  <h3>当年累计水耗</h3>
+                  <p><em>251527</em><i>T</i></p>
+                </div>
+                <div class="item">
+                  <h3>昨日同期</h3>
+                  <p class="down">
+                    <img src="./static/image/down.png" />55.19%
+                  </p>
+                </div>
+                <div class="item">
+                  <h3>去年同期</h3>
+                  <p class="up"><img src="./static/image/up.png" />5.19%</p>
+                </div>
+              </div>
+              <div class="cvs-line">
+                <div id="waterAnalysis" style="height: 230px; margin-top: 10px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/moment.min.js"></script>
+    <script type="text/javascript" src="static/js/echarts.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=7205af5846ff17fd17c0a5dea28e6c0c"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"
+    ></script>
+
+    <script>
+      var myChart_HPday = null
+      var myChart_HPmonth = null
+      var myChart_totalEC = null
+      var myChart_waterAnalysis = null
+      var myChart_electricityAnalysis = null
+
+      function initEcharts1(){
+      var dom1 = document.getElementById('HPday')
+      myChart_HPday = echarts.init(dom1)
+      var colors = ['rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.5)']
+      var option1 = {
+        color: colors,
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        grid: {
+          top: '20%',
+          left: '8%',
+          right: '10%',
+          bottom: '12%'
+        },
+        toolbox: {
+          feature: {
+            dataView: {
+              show: false,
+              readOnly: false
+            },
+            restore: {
+              show: false
+            },
+            saveAsImage: {
+              show: false
+            }
+          }
+        },
+        legend: {
+          data: ['当日水耗', '当日电耗'],
+          left: 'center',
+          textStyle: {
+            color: '#fff',
+            fontSize: 14
+          },
+          icon: 'rect',
+          itemWidth: 15,
+          itemHeight: 2
+        },
+        xAxis: [
+          {
+            type: 'category',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            axisTick: {
+              alignWithLabel: true
+            },
+            data: ['02时', '03时', '04时', '05时', '06时', '07时', '08时']
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value',
+            name: 'T',
+            position: 'left',
+            axisLine: {
+              lineStyle: {
+                color: colors[0]
+              }
+            },
+            axisLabel: {
+              formatter: '{value} '
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,.05)'
+              }
+            }
+          },
+          {
+            type: 'value',
+            name: 'kWh',
+            position: 'right',
+            axisLine: {
+              lineStyle: {
+                color: colors[1]
+              }
+            },
+            axisLabel: {
+              formatter: '{value} '
+            },
+            splitLine: {
+              show: false
+            }
+          }
+        ],
+        series: [
+          {
+            name: '当日水耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: 'rgba(51, 153, 0, 1)',
+                lineStyle: {
+                  color: 'rgba(51, 153, 0, 1)'
+                }
+              }
+            },
+            data: [124, 165, 61, 126, 142, 122, 132]
+          },
+          {
+            name: '当日电耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: 'rgba(0, 102, 255,1)',
+                lineStyle: {
+                  color: 'rgba(0, 102, 255,1)'
+                }
+              }
+            },
+            yAxisIndex: 1,
+            data: [1132, 1115, 1148, 1108, 126, 1215, 1149]
+          }
+        ]
+      }
+      if (option1 && typeof option1 === 'object') {
+        myChart_HPday.setOption(option1, true)
+      }}
+
+      function initEcharts2(){
+      var dom2 = document.getElementById('HPmonth')
+      myChart_HPmonth = echarts.init(dom2)
+      var colors = ['rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.5)']
+      var option2 = {
+        color: colors,
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        grid: {
+          top: '20%',
+          left: '8%',
+          right: '10%',
+          bottom: '12%'
+        },
+        toolbox: {
+          feature: {
+            dataView: {
+              show: false,
+              readOnly: false
+            },
+            restore: {
+              show: false
+            },
+            saveAsImage: {
+              show: false
+            }
+          }
+        },
+        legend: {
+          data: ['当日水耗', '当日电耗'],
+          left: 'center',
+          textStyle: {
+            color: '#fff',
+            fontSize: 14
+          },
+          icon: 'rect',
+          itemWidth: 15,
+          itemHeight: 2
+        },
+        xAxis: [
+          {
+            type: 'category',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            axisTick: {
+              alignWithLabel: true
+            },
+            data: ['02时', '03时', '04时', '05时', '06时', '07时', '08时']
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value',
+            name: 'T',
+            position: 'left',
+            axisLine: {
+              lineStyle: {
+                color: colors[0]
+              }
+            },
+            axisLabel: {
+              formatter: '{value} '
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,.05)'
+              }
+            }
+          },
+          {
+            type: 'value',
+            name: 'kWh',
+            position: 'right',
+            axisLine: {
+              lineStyle: {
+                color: colors[1]
+              }
+            },
+            axisLabel: {
+              formatter: '{value} '
+            },
+            splitLine: {
+              show: false
+            }
+          }
+        ],
+        series: [
+          {
+            name: '当月水耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: 'rgba(51, 153, 0, 1)',
+                lineStyle: {
+                  color: 'rgba(51, 153, 0, 1)'
+                }
+              }
+            },
+            data: [124, 165, 61, 126, 142, 122, 132]
+          },
+          {
+            name: '当月电耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: 'rgba(0, 102, 255,1)',
+                lineStyle: {
+                  color: 'rgba(0, 102, 255,1)'
+                }
+              }
+            },
+            yAxisIndex: 1,
+            data: [1132, 1115, 1148, 1108, 126, 1215, 1149]
+          }
+        ]
+      }
+      if (option2 && typeof option2 === 'object') {
+        myChart_HPmonth.setOption(option2, true)
+      }}
+
+      function initEcharts3(){
+      var dom3 = document.getElementById('totalEC')
+      myChart_totalEC = echarts.init(dom3)
+      var option3 = {
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          left: 'center',
+          data: ['电耗', '水耗'],
+          textStyle: {
+            color: '#fff'
+          },
+          top: 15,
+        },
+
+        grid: {
+          top: '20%',
+          left: '16%',
+          right: '16%',
+          bottom: '9%'
+        },
+        color: ['#0066FF', '#339900'],
+        graphic: {
+          //图形中间文字
+          type: 'text',
+          left: 'center',
+          top: 'center',
+          style: {
+            text: '总能耗\n1254',
+            textAlign: 'center',
+            fill: '#fff',
+            fontSize: 16,
+            lineHeight: 2
+          }
+        },
+        series: [
+          {
+            type: 'pie',
+            radius: ['40%', '55%'],
+            hoverAnimation: true,
+            avoidLabelOverlap: false,
+            label: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              label: {
+                show: false,
+                fontSize: '50',
+                fontWeight: 'bold'
+              }
+            },
+            labelLine: {
+              show: false
+            },
+
+            data: [
+              {
+                value: 35,
+                name: '电耗'
+              },
+              {
+                value: 310,
+                name: '水耗'
+              }
+            ]
+          }
+        ]
+      }
+      if (option3 && typeof option3 === 'object') {
+        myChart_totalEC.setOption(option3, true)
+      }}
+      
+      function initEcharts4(){
+      var dom4 = document.getElementById('waterAnalysis')
+      myChart_waterAnalysis = echarts.init(dom4)
+      var colors = ['rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.5)']
+      var option4 = {
+        color: colors,
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        grid: {
+          top: '20%',
+          left: '12%',
+          right: '4%',
+          bottom: '18%'
+        },
+
+        legend: {
+          data: ['当日水耗', '昨日同期', '去年同期'],
+          left: 'center',
+          textStyle: {
+            color: '#999999',
+            fontSize: 14
+          },
+          icon: 'rect',
+          itemWidth: 15,
+          itemHeight: 2
+        },
+        xAxis: [
+          {
+            type: 'category',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            axisTick: {
+              alignWithLabel: true
+            },
+            data: ['02时', '03时', '04时', '05时', '06时', '07时', '08时']
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,.05)'
+              }
+            }
+          }
+        ],
+        series: [
+          {
+            name: '当日水耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#C23531',
+                lineStyle: {
+                  color: '#C23531'
+                }
+              }
+            },
+            data: [124, 165, 61, 126, 142, 122, 132]
+          },
+          {
+            name: '昨日同期',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#FF9900',
+                lineStyle: {
+                  color: '#FF9900'
+                }
+              }
+            },
+            data: [1132, 1115, 1148, 1108, 126, 1215, 1149]
+          },
+          {
+            name: '去年同期',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#88B7BD',
+                lineStyle: {
+                  color: '#88B7BD'
+                }
+              }
+            },
+            data: [132, 111, 118, 108, 16, 115, 149]
+          }
+        ]
+      }
+      if (option4 && typeof option4 === 'object') {
+        myChart_waterAnalysis.setOption(option4, true)
+      }}
+
+      function initEcharts5(){
+      var dom5 = document.getElementById('electricityAnalysis')
+      myChart_electricityAnalysis = echarts.init(dom5)
+      var colors = ['rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 0.5)']
+      var option5 = {
+        color: colors,
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        grid: {
+          top: '20%',
+          left: '12%',
+          right: '4%',
+          bottom: '18%'
+        },
+
+        legend: {
+          data: ['当日电耗', '昨日同期', '去年同期'],
+          left: 'center',
+          textStyle: {
+            color: '#999999',
+            fontSize: 14
+          },
+          icon: 'rect',
+          itemWidth: 15,
+          itemHeight: 2
+        },
+        xAxis: [
+          {
+            type: 'category',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            axisTick: {
+              alignWithLabel: true
+            },
+            data: ['02时', '03时', '04时', '05时', '06时', '07时', '08时']
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value',
+            axisLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,0.5)'
+              }
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(255,255,255,.05)'
+              }
+            }
+          }
+        ],
+        series: [
+          {
+            name: '当日电耗',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#C23531',
+                lineStyle: {
+                  color: '#C23531'
+                }
+              }
+            },
+            data: [124, 165, 61, 126, 142, 122, 132]
+          },
+          {
+            name: '昨日同期',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#FF9900',
+                lineStyle: {
+                  color: '#FF9900'
+                }
+              }
+            },
+            data: [1132, 1115, 1148, 1108, 126, 1215, 1149]
+          },
+          {
+            name: '去年同期',
+            type: 'line',
+            //smooth: true,
+            itemStyle: {
+              normal: {
+                color: '#88B7BD',
+                lineStyle: {
+                  color: '#88B7BD'
+                }
+              }
+            },
+            data: [132, 111, 118, 108, 16, 115, 149]
+          }
+        ]
+      }
+      if (option5 && typeof option5 === 'object') {
+        myChart_electricityAnalysis.setOption(option5, true)
+      }}
+
+      window.onresize = function () {
+        myChart_HPday.resize()
+        myChart_HPmonth.resize()
+        myChart_totalEC.resize()
+        myChart_waterAnalysis.resize()
+        myChart_electricityAnalysis.resize()
+      }
+    </script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
